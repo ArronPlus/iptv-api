@@ -14,8 +14,6 @@ app = Flask(__name__)
 #def show_index():
     #return get_result_file_content()
 
-
-@app.route("/favicon.ico")
 def favicon():
     return send_from_directory(resource_path('static/images'), 'favicon.ico',
                                mimetype='image/vnd.microsoft.icon')
@@ -48,6 +46,9 @@ def show_m3u():
     #response.mimetype = "text/plain"
     #return response
 
+@app.errorhandler(404)
+def handle_not_found(e):
+    return Response(status=444)  # 自定义返回 444
 
 def run_service():
     try:
