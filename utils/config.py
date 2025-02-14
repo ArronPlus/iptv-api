@@ -312,7 +312,7 @@ class ConfigManager:
 
     @property
     def app_port(self):
-        return os.environ.get("APP_PORT") or self.config.getint("Settings", "app_port", fallback=8000)
+        return os.environ.get("APP_PORT") or self.config.getint("Settings", "app_port", fallback=12345)
 
     @property
     def open_supply(self):
