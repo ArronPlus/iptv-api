@@ -286,33 +286,7 @@ docker run -d -p 8000:8000 guovern/iptv-api:lite
 #### 3. 更新结果
 
 - 接口地址：`ip:8000`
-- m3u 接口：`ip:8000/m3u`
+- m3u 接口：`ip:8000/iptv.m3u`
 - txt 接口：`ip:8000/txt`
-- 接口内容：`ip:8000/content`
+- 接口内容：`ip:8000/iptv.content`
 - 测速日志：`ip:8000/log`
-
-## 更新日志
-
-[更新日志](./CHANGELOG.md)
-
-## 赞赏
-
-<div>开发维护不易，请我喝杯咖啡☕️吧~</div>
-
-| 支付宝                                  | 微信                                      |
-|--------------------------------------|-----------------------------------------|
-| ![支付宝扫码](./static/images/alipay.jpg) | ![微信扫码](./static/images/appreciate.jpg) |
-
-## 关注
-
-微信公众号搜索 Govin，或扫码，接收更新推送、学习更多使用技巧：
-
-![微信公众号](./static/images/qrcode.jpg)
-
-## 免责声明
-
-本项目仅供学习交流用途，接口数据均来源于网络，如有侵权，请联系删除
-
-## 许可证
-
-[MIT](./LICENSE) License &copy; 2024-PRESENT [Govin](https://github.com/guovin)
