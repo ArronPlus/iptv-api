@@ -11,8 +11,8 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def show_index():
-    return get_result_file_content()
+#def show_index():
+    #return get_result_file_content()
 
 
 @app.route("/favicon.ico")
@@ -31,30 +31,30 @@ def show_m3u():
     return get_result_file_content(file_type="m3u")
 
 
-@app.route("/content")
-def show_content():
-    return get_result_file_content(show_content=True)
+#@app.route("/content")
+#def show_content():
+    #return get_result_file_content(show_content=True)
 
 
-@app.route("/log")
-def show_log():
-    log_path = resource_path(constants.sort_log_path)
-    if os.path.exists(log_path):
-        with open(log_path, "r", encoding="utf-8") as file:
-            content = file.read()
-    else:
-        content = constants.waiting_tip
-    response = make_response(content)
-    response.mimetype = "text/plain"
-    return response
+#@app.route("/log")
+#def show_log():
+    #log_path = resource_path(constants.sort_log_path)
+    #if os.path.exists(log_path):
+        #with open(log_path, "r", encoding="utf-8") as file:
+            #content = file.read()
+    #else:
+        #content = constants.waiting_tip
+    #response = make_response(content)
+    #response.mimetype = "text/plain"
+    #return response
 
 
 def run_service():
     try:
         if not os.environ.get("GITHUB_ACTIONS"):
             ip_address = get_ip_address()
-            print(f"📄 Result content: {ip_address}/content")
-            print(f"📄 Log content: {ip_address}/log")
+            #print(f"📄 Result content: {ip_address}/content")
+            #print(f"📄 Log content: {ip_address}/log")
             print(f"🚀 M3u api: {ip_address}/iptv.m3u")
             print(f"🚀 Txt api: {ip_address}/iptv.txt")
             print(f"✅ You can use this url to watch IPTV 📺: {ip_address}")
