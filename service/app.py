@@ -21,12 +21,12 @@ def favicon():
                                mimetype='image/vnd.microsoft.icon')
 
 
-@app.route("/txt")
+@app.route("/iptv.txt")
 def show_txt():
     return get_result_file_content(file_type="txt")
 
 
-@app.route("/m3u")
+@app.route("/iptv.m3u")
 def show_m3u():
     return get_result_file_content(file_type="m3u")
 
@@ -55,8 +55,8 @@ def run_service():
             ip_address = get_ip_address()
             print(f"📄 Result content: {ip_address}/content")
             print(f"📄 Log content: {ip_address}/log")
-            print(f"🚀 M3u api: {ip_address}/m3u")
-            print(f"🚀 Txt api: {ip_address}/txt")
+            print(f"🚀 M3u api: {ip_address}/iptv.m3u")
+            print(f"🚀 Txt api: {ip_address}/iptv.txt")
             print(f"✅ You can use this url to watch IPTV 📺: {ip_address}")
             app.run(host="0.0.0.0", port=config.app_port)
     except Exception as e:
