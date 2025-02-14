@@ -10,7 +10,7 @@ import utils.constants as constants
 app = Flask(__name__)
 
 
-@app.route("/")
+#@app.route("/")
 #def show_index():
     #return get_result_file_content()
 
