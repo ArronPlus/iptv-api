@@ -287,6 +287,6 @@ docker run -d -p 8000:8000 guovern/iptv-api:lite
 
 - 接口地址：`ip:8000`
 - m3u 接口：`ip:8000/iptv.m3u`
-- txt 接口：`ip:8000/txt`
-- 接口内容：`ip:8000/iptv.content`
+- txt 接口：`ip:8000/iptv.txt`
+- 接口内容：`ip:8000/content`
 - 测速日志：`ip:8000/log`
