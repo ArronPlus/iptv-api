@@ -11,8 +11,10 @@ done
 . /.venv/bin/activate
 
 (crontab -l ; \
-if [ -n "$UPDATE_CRON1" ]; then echo "$UPDATE_CRON1 cd $APP_WORKDIR && /.venv/bin/python main.py"; fi; \
-if [ -n "$UPDATE_CRON2" ]; then echo "$UPDATE_CRON2 cd $APP_WORKDIR && /.venv/bin/python main.py"; fi) | crontab -
+#if [ -n "$UPDATE_CRON1" ]; then echo "$UPDATE_CRON1 cd $APP_WORKDIR && /.venv/bin/python main.py"; fi; \
+#if [ -n "$UPDATE_CRON2" ]; then echo "$UPDATE_CRON2 cd $APP_WORKDIR && /.venv/bin/python main.py"; fi) | crontab -
+if [ -n "$UPDATE_CRON" ]; then echo "$UPDATE_CRON cd $APP_WORKDIR && /.venv/bin/python main.py"; fi) | crontab -
+
 
 # dcron log level
 # LOG_EMERG	0	[* system is unusable *]
