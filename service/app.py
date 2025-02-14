@@ -46,10 +46,6 @@ def show_m3u():
     #response.mimetype = "text/plain"
     #return response
 
-@app.errorhandler(404)
-def handle_not_found(e):
-    return Response(status=444)  # 自定义返回 444
-
 def run_service():
     try:
         if not os.environ.get("GITHUB_ACTIONS"):
