@@ -1482,10 +1482,13 @@ BTV纪实
 双鸭山综合
 七台河民生社教
 4K频道,#genre#
+CCTV-4K
 CCTV-16 4K
 华数-4K
 纯享-4K
 欢笑剧场-4K
+8K频道,#genre#
+CCTV-8K
 CGTN,#genre#
 CGTN
 CGTN-纪录
